@@ -1,6 +1,6 @@
-const saveTodo = () => {
-    const inputTitle = document.getElementById('todo-title').value;
-    putItemInArray("todos", {title: inputTitle, status: "unfinished"})
+const saveTodo = (inputId) => {
+    const inputTitle = document.getElementById(inputId).value;
+    putItem("todos", {title: inputTitle, status: "unfinished"})
     inputTitle.value = "";
 
     location.reload();

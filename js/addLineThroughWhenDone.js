@@ -1,10 +1,7 @@
-const addLineThroughWhenDone = (inputId) => {
-    const lineThroughClass = "line-through";
-    const inputClasses = document.getElementById(inputId).classList;
+const addLineThroughWhenDone = (todoItem) => {
+    todoItem.status = todoItem.status === 'done' ? 'unfinished' : 'done'
 
-    if(inputClasses.contains(lineThroughClass)){
-        inputClasses.remove(lineThroughClass)
-    }else{
-        inputClasses.add(lineThroughClass);
-    }
+    updateItem("todos", todoItem);
+
+    location.reload();
 }
